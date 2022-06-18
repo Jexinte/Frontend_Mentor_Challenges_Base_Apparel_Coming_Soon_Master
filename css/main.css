@@ -1,0 +1,243 @@
+/* JOSEFIN SANS LIGHT 300 , REGULAR 400 , SEMIBOLD 600  */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    
+    /* PRIMARY COLORS */
+
+        --desaturatedRed: hsl(0, 36%, 70%);
+        --softRed: hsl(0, 93%, 68%);
+
+    /* NEUTRAL  */
+
+        --darkGrayishRed: hsl(0, 6%, 24%);
+
+    /* GRADIENTS  */
+
+        --startFirstGradient : hsl(0, 0%, 100%); /* Ne pas oublier de mettre 135 deg devant les couleurs pour le linear gradient */
+        --endFirstGradient :hsl(0, 100%, 98%); /* Ne pas oublier de mettre 135 deg devant les couleurs pour le linear gradient */
+        --startSecondGradient : hsl(0, 80%, 86%);/* Ne pas oublier de mettre 135 deg devant les couleurs pour le linear gradient */
+        --endSecondGradient :hsl(0, 74%, 74%);/* Ne pas oublier de mettre 135 deg devant les couleurs pour le linear gradient */
+
+    /* FONT SIZE */
+
+        --fSize:16px;
+
+    /* FONT FAMILY  */
+
+     --josefinSans: 'Josefin Sans';
+
+     /* FONT WEIGHT  */
+
+        --300 : 300;
+        --400 : 400;
+        --600 : 600;
+}
+
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--josefinSans);
+    font-size: var(--fSize);
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    background-image: linear-gradient( to left,var(--startFirstGradient),var(--startFirstGradient),var(--endFirstGradient));
+}
+
+.left-side {
+    background:url('../images/bg-pattern-desktop.svg'); 
+      background-size: cover;
+    width: 1150px;
+    padding: 4em 3em 0 13em;
+}
+
+header img {
+    padding-bottom: 7.188em;
+}
+
+ h1 {
+    color:#C99FA3;
+    font-size: 4.5em;
+    font-weight: var(--300);
+    margin-bottom: .3em;
+}
+
+.were {
+    letter-spacing: 21px;
+}
+.soon {
+    font-weight: var(--600);
+    color:var(--darkGrayishRed)
+}
+
+.main--description {
+
+    color: #D1B4B6;
+    line-height: 1.7em;
+    padding-bottom: 42px;
+}
+.right-side img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.right-side {
+    width: 769px;
+}
+
+input[type="email"]{
+width: 432px;
+height: 57px;
+border-radius: 50px;
+border:1px solid #DACED0 ;
+outline:none;
+padding-left: 2em;
+position: relative;
+right: 3px;
+}
+
+.box-form {
+    position: relative;
+    
+}
+::placeholder {
+    color: #F9EDEE;
+    font-weight: bolder;
+}
+
+
+
+.arrow {
+    
+    background-image: linear-gradient(to right,#F6B0B0,var(--endSecondGradient));
+    padding:  22px 47px 16px 47px;
+    border-radius: 50px;
+    position:absolute;
+    left: 325px;
+    top:-2px;
+    border:none;
+    cursor: pointer;
+}
+
+.arrow:hover{
+   filter:brightness(130%)
+}
+.error-exclamation{
+    position: relative;
+    top:-39px;
+    left:18em;
+    visibility: hidden;
+}
+
+.errormsgstyle {
+    position: relative;
+    color:red;
+    left:12px;
+    font-size: 14px;
+    top:-12px;
+}
+
+@media screen and (max-width:1270px) {
+    .left-side {
+        padding-left: 5em;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-side {
+        order:2;
+        width: 100%;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .left-side header {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        background-color: white;
+        height: 124px;
+    }
+
+    .left-side header img {
+        position: relative;
+        left:39px;
+        top:48px;
+    }
+
+    .right-side {
+        order:1;
+        width: 100%;
+    }
+
+    .right-side img {
+        width: 100%;
+        position: relative;
+        top:124px;
+        height: 393px;
+        object-fit: cover;
+    }
+
+    .left-side h1 {
+        font-size: 2em;
+        position: relative;
+        top:-164px;
+        text-align: center;
+    }
+
+    .left-side .main--description {
+        text-align: center;
+        font-size: 12px;
+        position: relative;
+        top:-129px;
+    }
+
+    .box-form {
+        text-align: center;
+    }
+    input[type="email"] {
+        position: relative;
+        right: -57px;
+        width: 296px;
+        right: -57px;
+        bottom: 109px;
+    }
+
+    .arrow {
+        position: relative;
+        top:-103px;
+        left:-56px;
+
+    }
+
+    .error-exclamation {
+        position: relative;
+        left:211px;
+        top:-147px;
+    }
+
+    .errormsg {
+        position: relative;
+        top:-124px;
+        left: 72px;
+    }
+
+
+
+}
